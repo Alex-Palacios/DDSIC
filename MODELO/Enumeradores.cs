@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MODELO
 {
-
+//
     public enum eTransaccion
     {
         PARTIDA= 1,
