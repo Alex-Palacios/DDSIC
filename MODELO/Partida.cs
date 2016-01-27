@@ -57,7 +57,7 @@ namespace MODELO
         public Partida Copy()
         {
             Partida copy = (Partida)this.MemberwiseClone();
-            copy.MOVIMIENTOS = this.MOVIMIENTOS.Copy();
+            copy.MOVIMIENTOS = this.MOVIMIENTOS.Copy();//
             return copy;
         }
 
