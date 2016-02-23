@@ -128,6 +128,9 @@ namespace DDB
 
 
 
+
+
+
         public bool LOGIN(string sistema, string usuario, string password)
         {
             bool reader = false;
@@ -177,6 +180,310 @@ namespace DDB
 
         //CONFIG CONTABLE
 
+        private string buildItemsConfigConta(DataTable cuentas)
+        {
+            string items = "";
+            foreach (DataRow row in cuentas.Rows)
+            {
+                string cuenta = null;
+                if (row.Field<string>("COD_CTA") != "Ninguna")
+                {
+                    cuenta = row.Field<string>("COD_CTA");
+                }
+                items = items + row.Field<string>("COD_SUC") + ">"
+                    + row.Field<string>("TIPO_CUENTA") + ">"
+                    + cuenta +"&";
+            }
+            return items;
+        }
+
+
+        public DataTable getConfigConta(eSistema sistema)
+        {
+            MySqlDataReader reader;
+            DataTable datos = new DataTable();
+            DataRow row = null;
+            try
+            {
+                string sql = "SELECT * FROM ddsic.view_config_cuentas WHERE COD_SISTEM = @sys;";
+                MySqlCommand cmd = new MySqlCommand(sql, conn.conection);
+                cmd.CommandType = CommandType.Text;
+
+                MySqlParameter sys = cmd.Parameters.Add("sys", MySqlDbType.VarChar, 20);
+                sys.Direction = ParameterDirection.Input;
+
+                sys.Value = sistema.ToString();
+
+                reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    datos.Load(reader);
+                }
+                reader.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("NO SE PUDO CONSULTAR LAS CUENTAS CONFIGURADAS DEL SISTEMA " + sistema.ToString() + " \n" + e.Message, "ERROR EN CONSULTA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return datos;
+        }
+
+
+
+
+
+        public bool setConfigConta(eSistema sistemconta,DataTable cuentas, string sucursal, string empleado, string sistema)
+        {
+            bool OK = true;
+            try
+            {
+                string sql = "ddsic.SP_SET_CONFIG_CONTA";
+                MySqlCommand cmd = new MySqlCommand(sql, conn.conection);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                MySqlParameter items_cuentas = cmd.Parameters.Add("items_cuentas", MySqlDbType.LongText);
+                items_cuentas.Direction = ParameterDirection.Input;
+                MySqlParameter sistemconfig = cmd.Parameters.Add("sistemconfig", MySqlDbType.VarChar, 20);
+                sistemconfig.Direction = ParameterDirection.Input;
+
+                MySqlParameter suc = cmd.Parameters.Add("suc", MySqlDbType.VarChar, 2);
+                suc.Direction = ParameterDirection.Input;
+                MySqlParameter emp = cmd.Parameters.Add("emp", MySqlDbType.VarChar, 15);
+                emp.Direction = ParameterDirection.Input;
+                MySqlParameter sys = cmd.Parameters.Add("sys", MySqlDbType.VarChar, 20);
+                sys.Direction = ParameterDirection.Input;
+
+                sistemconfig.Value = sistemconta;
+                items_cuentas.Value = buildItemsConfigConta(cuentas);
+
+                suc.Value = sucursal;
+                emp.Value = empleado;
+                sys.Value = sistema;
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("CONFIGURACION DE CUENTAS ACTUALIZADA", "OPERACION FINALIZADA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception e)
+            {
+                OK = false;
+                MessageBox.Show(e.Message, "ERROR AL ACTUALIZAR CONFIGURACION DE CUENTAS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return OK;
+        }
+
+
+        private string buildItemsConfigInvConta(DataTable cuentas)
+        {
+            string items = "";
+            foreach (DataRow row in cuentas.Rows)
+            {
+                string cuenta = null;
+                if (row.Field<string>("COD_CTA") != "Ninguna")
+                {
+                    cuenta = row.Field<string>("COD_CTA");
+                }
+                items = items + row.Field<string>("CATEGORIA") + ">"
+                    + row.Field<string>("COD_ITEM") + ">"
+                    + cuenta + "&";
+            }
+            return items;
+        }
+
+
+        public DataTable getConfigInvConta(eCategoriaInv categoria)
+        {
+            MySqlDataReader reader;
+            DataTable datos = new DataTable();
+            DataRow row = null;
+            try
+            {
+                string sql = "SELECT * FROM ddsic.view_config_inv WHERE CATEGORIA = @cat;";
+                MySqlCommand cmd = new MySqlCommand(sql, conn.conection);
+                cmd.CommandType = CommandType.Text;
+
+                MySqlParameter cat = cmd.Parameters.Add("cat", MySqlDbType.VarChar, 50);
+                cat.Direction = ParameterDirection.Input;
+
+                cat.Value = categoria.ToString();
+
+                reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    datos.Load(reader);
+                }
+                reader.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("NO SE PUDO CONSULTAR LAS CUENTAS CONFIGURADAS DE CATEGORIA " + categoria.ToString() + " \n" + e.Message, "ERROR EN CONSULTA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return datos;
+        }
+
+
+
+
+
+        public bool setConfigInvConta(eCategoriaInv categoriaconta, DataTable cuentas, string sucursal, string empleado, string sistema)
+        {
+            bool OK = true;
+            try
+            {
+                string sql = "ddsic.SP_SET_CONFIG_INV_CONTA";
+                MySqlCommand cmd = new MySqlCommand(sql, conn.conection);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                MySqlParameter items_cuentas = cmd.Parameters.Add("items_cuentas", MySqlDbType.LongText);
+                items_cuentas.Direction = ParameterDirection.Input;
+                MySqlParameter categoriaconfig = cmd.Parameters.Add("categoriaconfig", MySqlDbType.VarChar, 50);
+                categoriaconfig.Direction = ParameterDirection.Input;
+
+                MySqlParameter suc = cmd.Parameters.Add("suc", MySqlDbType.VarChar, 2);
+                suc.Direction = ParameterDirection.Input;
+                MySqlParameter emp = cmd.Parameters.Add("emp", MySqlDbType.VarChar, 15);
+                emp.Direction = ParameterDirection.Input;
+                MySqlParameter sys = cmd.Parameters.Add("sys", MySqlDbType.VarChar, 20);
+                sys.Direction = ParameterDirection.Input;
+
+                categoriaconfig.Value = categoriaconta.ToString();
+                items_cuentas.Value = buildItemsConfigInvConta(cuentas);
+
+                suc.Value = sucursal;
+                emp.Value = empleado;
+                sys.Value = sistema;
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("CONFIGURACION DE CUENTAS DE INVENTARIO ACTUALIZADAS", "OPERACION FINALIZADA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception e)
+            {
+                OK = false;
+                MessageBox.Show(e.Message, "ERROR AL ACTUALIZAR CONFIGURACION DE CUENTAS", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return OK;
+        }
+
+
+
+        public bool insertConfigInvConta(eCategoriaInv categoria, string estilo,string sucursal, string empleado, string sistema)
+        {
+            bool OK = true;
+            try
+            {
+                string sql = "ddsic.SP_INSERT_INV_CONTA";
+                MySqlCommand cmd = new MySqlCommand(sql, conn.conection);
+                cmd.CommandType = CommandType.StoredProcedure;
+                MySqlParameter cat = cmd.Parameters.Add("cat", MySqlDbType.VarChar, 50);
+                cat.Direction = ParameterDirection.Input;
+                MySqlParameter item = cmd.Parameters.Add("item", MySqlDbType.VarChar, 15);
+                item.Direction = ParameterDirection.Input;
+
+
+                MySqlParameter suc = cmd.Parameters.Add("suc", MySqlDbType.VarChar, 2);
+                suc.Direction = ParameterDirection.Input;
+                MySqlParameter emp = cmd.Parameters.Add("emp", MySqlDbType.VarChar, 15);
+                emp.Direction = ParameterDirection.Input;
+                MySqlParameter sys = cmd.Parameters.Add("sys", MySqlDbType.VarChar, 20);
+                sys.Direction = ParameterDirection.Input;
+
+
+                cat.Value = categoria.ToString();
+                item.Value = estilo;
+
+                suc.Value = sucursal;
+                emp.Value = empleado;
+                sys.Value = sistema;
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("CONFIGURACION DE CUENTAS DE INVENTARIO ACTUALIZADO", "OPERACION FINALIZADA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                OK = false;
+                MessageBox.Show(ex.Message, "ERROR AL REGISTRAR CONFIGURACION DE INVENTARIO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return OK;
+        }
+
+
+
+        public bool deleteConfigInvConta(eCategoriaInv categoria, string estilo, string sucursal, string empleado, string sistema)
+        {
+            bool OK = true;
+            try
+            {
+                string sql = "ddsic.SP_DELETE_INV_CONTA";
+                MySqlCommand cmd = new MySqlCommand(sql, conn.conection);
+                cmd.CommandType = CommandType.StoredProcedure;
+                MySqlParameter cat = cmd.Parameters.Add("cat", MySqlDbType.VarChar, 50);
+                cat.Direction = ParameterDirection.Input;
+                MySqlParameter item = cmd.Parameters.Add("item", MySqlDbType.VarChar, 15);
+                item.Direction = ParameterDirection.Input;
+
+
+                MySqlParameter suc = cmd.Parameters.Add("suc", MySqlDbType.VarChar, 2);
+                suc.Direction = ParameterDirection.Input;
+                MySqlParameter emp = cmd.Parameters.Add("emp", MySqlDbType.VarChar, 15);
+                emp.Direction = ParameterDirection.Input;
+                MySqlParameter sys = cmd.Parameters.Add("sys", MySqlDbType.VarChar, 20);
+                sys.Direction = ParameterDirection.Input;
+
+
+                cat.Value = categoria.ToString();
+                item.Value = estilo;
+
+                suc.Value = sucursal;
+                emp.Value = empleado;
+                sys.Value = sistema;
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("CONFIGURACION DE CUENTAS DE INVENTARIO ACTUALIZADO", "OPERACION FINALIZADA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                OK = false;
+                MessageBox.Show(ex.Message, "ERROR AL ELIMINAR CONFIGURACION DE INVENTARIO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return OK;
+        }
+
+
+
+
+
+        //CATEGORIAS Y CATALOGO PRODUCTOS
+
+        public DataTable getEstilos(eCategoriaInv categoria)
+        {
+            MySqlDataReader reader;
+            DataTable datos = new DataTable();
+            DataRow row = null;
+            try
+            {
+                string sql = "SELECT * FROM ddicark.view_catalogo WHERE CATEGORIA = @cat;";
+                MySqlCommand cmd = new MySqlCommand(sql, conn.conection);
+                cmd.CommandType = CommandType.Text;
+
+                MySqlParameter cat = cmd.Parameters.Add("cat", MySqlDbType.VarChar, 50);
+                cat.Direction = ParameterDirection.Input;
+
+                cat.Value = categoria.ToString();
+
+                reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    datos.Load(reader);
+                }
+                reader.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("NO SE PUDO CONSULTAR CATALOGO DE CATEGORIA " + categoria.ToString() + " \n" + e.Message, "ERROR EN CONSULTA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return datos;
+        }
+
+
         
 
         //PERSONAL
@@ -213,7 +520,36 @@ namespace DDB
 
 
 
+        //SUCURSALES
+        public DataTable getSucursales(eSistema sistema)
+        {
+            MySqlDataReader reader;
+            DataTable datos = new DataTable();
+            DataRow row = null;
+            try
+            {
+                string sql = "ddicark.SP_GET_SUCURSALES;";
+                MySqlCommand cmd = new MySqlCommand(sql, conn.conection);
+                cmd.CommandType = CommandType.StoredProcedure;
 
+                MySqlParameter sys = cmd.Parameters.Add("sys", MySqlDbType.VarChar, 20);
+                sys.Direction = ParameterDirection.Input;
+
+                sys.Value = sistema.ToString();
+
+                reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    datos.Load(reader);
+                }
+                reader.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("NO SE PUEDE CONSULTAR SUCURSALES DE " + sistema.ToString() + "\n" + e.Message, "ERROR EN CONSULTA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return datos;
+        }
 
 
     }

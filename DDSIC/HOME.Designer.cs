@@ -48,10 +48,6 @@
             this.btnMenuManualUsuario = new DevComponents.DotNetBar.ButtonItem();
             this.btnMenuAcercaDe = new DevComponents.DotNetBar.ButtonItem();
             this.MENU_PRINCIPAL = new DevComponents.DotNetBar.RibbonControl();
-            this.ribbonPanel1 = new DevComponents.DotNetBar.RibbonPanel();
-            this.grupoCatalogos = new DevComponents.DotNetBar.RibbonBar();
-            this.btnCatalogoCuentas = new DevComponents.DotNetBar.ButtonItem();
-            this.grupoClientes = new DevComponents.DotNetBar.RibbonBar();
             this.ribbonPanel7 = new DevComponents.DotNetBar.RibbonPanel();
             this.grupoAsientos = new DevComponents.DotNetBar.RibbonBar();
             this.btnPartida = new DevComponents.DotNetBar.ButtonItem();
@@ -59,9 +55,6 @@
             this.buttonItem15 = new DevComponents.DotNetBar.ButtonItem();
             this.grupoPeriodo = new DevComponents.DotNetBar.RibbonBar();
             this.btnPeriodo = new DevComponents.DotNetBar.ButtonItem();
-            this.ribbonPanel4 = new DevComponents.DotNetBar.RibbonPanel();
-            this.grupoReportesConta = new DevComponents.DotNetBar.RibbonBar();
-            this.grupoReportesInventario = new DevComponents.DotNetBar.RibbonBar();
             this.ribbonPanel3 = new DevComponents.DotNetBar.RibbonPanel();
             this.grupoConfigConexion = new DevComponents.DotNetBar.RibbonBar();
             this.buttonItem32 = new DevComponents.DotNetBar.ButtonItem();
@@ -69,6 +62,14 @@
             this.buttonItem35 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem36 = new DevComponents.DotNetBar.ButtonItem();
             this.grupoConfigAdmin = new DevComponents.DotNetBar.RibbonBar();
+            this.btnMenuConfigConta = new DevComponents.DotNetBar.ButtonItem();
+            this.btnMenuConfigInv = new DevComponents.DotNetBar.ButtonItem();
+            this.ribbonPanel1 = new DevComponents.DotNetBar.RibbonPanel();
+            this.grupoCatalogos = new DevComponents.DotNetBar.RibbonBar();
+            this.btnCatalogoCuentas = new DevComponents.DotNetBar.ButtonItem();
+            this.ribbonPanel4 = new DevComponents.DotNetBar.RibbonPanel();
+            this.grupoReportesConta = new DevComponents.DotNetBar.RibbonBar();
+            this.grupoReportesInventario = new DevComponents.DotNetBar.RibbonBar();
             this.ribbonPanel6 = new DevComponents.DotNetBar.RibbonPanel();
             this.grupoAyudaInfo = new DevComponents.DotNetBar.RibbonBar();
             this.buttonItem39 = new DevComponents.DotNetBar.ButtonItem();
@@ -104,12 +105,13 @@
             this.buttonItem45 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem46 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem47 = new DevComponents.DotNetBar.ButtonItem();
+            this.ribbonBar1 = new DevComponents.DotNetBar.RibbonBar();
             this.STATUS_BAR.SuspendLayout();
             this.MENU_PRINCIPAL.SuspendLayout();
-            this.ribbonPanel1.SuspendLayout();
             this.ribbonPanel7.SuspendLayout();
-            this.ribbonPanel4.SuspendLayout();
             this.ribbonPanel3.SuspendLayout();
+            this.ribbonPanel1.SuspendLayout();
+            this.ribbonPanel4.SuspendLayout();
             this.ribbonPanel6.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -254,11 +256,11 @@
             this.MENU_PRINCIPAL.BackgroundStyle.Class = "";
             this.MENU_PRINCIPAL.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.MENU_PRINCIPAL.CaptionVisible = true;
-            this.MENU_PRINCIPAL.Controls.Add(this.ribbonPanel1);
             this.MENU_PRINCIPAL.Controls.Add(this.ribbonPanel7);
             this.MENU_PRINCIPAL.Controls.Add(this.ribbonPanel4);
             this.MENU_PRINCIPAL.Controls.Add(this.ribbonPanel3);
             this.MENU_PRINCIPAL.Controls.Add(this.ribbonPanel6);
+            this.MENU_PRINCIPAL.Controls.Add(this.ribbonPanel1);
             resources.ApplyResources(this.MENU_PRINCIPAL, "MENU_PRINCIPAL");
             this.MENU_PRINCIPAL.EnableQatPlacement = false;
             this.MENU_PRINCIPAL.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -276,99 +278,6 @@
             this.buttonItem1});
             this.MENU_PRINCIPAL.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.MENU_PRINCIPAL.TabGroupHeight = 14;
-            // 
-            // ribbonPanel1
-            // 
-            this.ribbonPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel1.Controls.Add(this.grupoCatalogos);
-            this.ribbonPanel1.Controls.Add(this.grupoClientes);
-            resources.ApplyResources(this.ribbonPanel1, "ribbonPanel1");
-            this.ribbonPanel1.Name = "ribbonPanel1";
-            // 
-            // 
-            // 
-            this.ribbonPanel1.Style.Class = "";
-            this.ribbonPanel1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel1.StyleMouseDown.Class = "";
-            this.ribbonPanel1.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel1.StyleMouseOver.Class = "";
-            this.ribbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // grupoCatalogos
-            // 
-            this.grupoCatalogos.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.grupoCatalogos.BackgroundMouseOverStyle.Class = "";
-            this.grupoCatalogos.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.grupoCatalogos.BackgroundStyle.Class = "";
-            this.grupoCatalogos.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.grupoCatalogos.ContainerControlProcessDialogKey = true;
-            resources.ApplyResources(this.grupoCatalogos, "grupoCatalogos");
-            this.grupoCatalogos.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.btnCatalogoCuentas});
-            this.grupoCatalogos.Name = "grupoCatalogos";
-            this.grupoCatalogos.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            // 
-            // 
-            // 
-            this.grupoCatalogos.TitleStyle.Class = "";
-            this.grupoCatalogos.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.grupoCatalogos.TitleStyleMouseOver.Class = "";
-            this.grupoCatalogos.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // btnCatalogoCuentas
-            // 
-            this.btnCatalogoCuentas.Image = global::DDSIC.Properties.Resources.libro_diario;
-            this.btnCatalogoCuentas.ImageFixedSize = new System.Drawing.Size(64, 64);
-            this.btnCatalogoCuentas.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Default;
-            this.btnCatalogoCuentas.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnCatalogoCuentas.Name = "btnCatalogoCuentas";
-            this.btnCatalogoCuentas.SubItemsExpandWidth = 14;
-            resources.ApplyResources(this.btnCatalogoCuentas, "btnCatalogoCuentas");
-            this.btnCatalogoCuentas.Click += new System.EventHandler(this.menuCatalogoCuentas);
-            // 
-            // grupoClientes
-            // 
-            this.grupoClientes.AutoOverflowEnabled = true;
-            this.grupoClientes.AutoSizeItems = false;
-            // 
-            // 
-            // 
-            this.grupoClientes.BackgroundMouseOverStyle.Class = "";
-            this.grupoClientes.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.grupoClientes.BackgroundStyle.Class = "";
-            this.grupoClientes.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.grupoClientes.ContainerControlProcessDialogKey = true;
-            resources.ApplyResources(this.grupoClientes, "grupoClientes");
-            this.grupoClientes.Name = "grupoClientes";
-            this.grupoClientes.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            // 
-            // 
-            // 
-            this.grupoClientes.TitleStyle.Class = "";
-            this.grupoClientes.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.grupoClientes.TitleStyleMouseOver.Class = "";
-            this.grupoClientes.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // ribbonPanel7
             // 
@@ -444,6 +353,7 @@
             this.buttonItem15});
             this.btnContabilizarTrans.SubItemsExpandWidth = 14;
             resources.ApplyResources(this.btnContabilizarTrans, "btnContabilizarTrans");
+            this.btnContabilizarTrans.Click += new System.EventHandler(this.menuTareasContabilizarTrans);
             // 
             // buttonItem15
             // 
@@ -487,85 +397,6 @@
             this.btnPeriodo.Name = "btnPeriodo";
             this.btnPeriodo.SubItemsExpandWidth = 14;
             resources.ApplyResources(this.btnPeriodo, "btnPeriodo");
-            // 
-            // ribbonPanel4
-            // 
-            this.ribbonPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel4.Controls.Add(this.grupoReportesConta);
-            this.ribbonPanel4.Controls.Add(this.grupoReportesInventario);
-            resources.ApplyResources(this.ribbonPanel4, "ribbonPanel4");
-            this.ribbonPanel4.Name = "ribbonPanel4";
-            // 
-            // 
-            // 
-            this.ribbonPanel4.Style.Class = "";
-            this.ribbonPanel4.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel4.StyleMouseDown.Class = "";
-            this.ribbonPanel4.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel4.StyleMouseOver.Class = "";
-            this.ribbonPanel4.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // grupoReportesConta
-            // 
-            this.grupoReportesConta.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.grupoReportesConta.BackgroundMouseOverStyle.Class = "";
-            this.grupoReportesConta.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.grupoReportesConta.BackgroundStyle.Class = "";
-            this.grupoReportesConta.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.grupoReportesConta.ContainerControlProcessDialogKey = true;
-            resources.ApplyResources(this.grupoReportesConta, "grupoReportesConta");
-            this.grupoReportesConta.Name = "grupoReportesConta";
-            this.grupoReportesConta.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            // 
-            // 
-            // 
-            this.grupoReportesConta.TitleStyle.Class = "";
-            this.grupoReportesConta.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.grupoReportesConta.TitleStyleMouseOver.Class = "";
-            this.grupoReportesConta.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // grupoReportesInventario
-            // 
-            this.grupoReportesInventario.AutoOverflowEnabled = true;
-            // 
-            // 
-            // 
-            this.grupoReportesInventario.BackgroundMouseOverStyle.Class = "";
-            this.grupoReportesInventario.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.grupoReportesInventario.BackgroundStyle.Class = "";
-            this.grupoReportesInventario.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.grupoReportesInventario.ContainerControlProcessDialogKey = true;
-            resources.ApplyResources(this.grupoReportesInventario, "grupoReportesInventario");
-            this.grupoReportesInventario.Name = "grupoReportesInventario";
-            this.grupoReportesInventario.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            // 
-            // 
-            // 
-            this.grupoReportesInventario.TitleStyle.Class = "";
-            this.grupoReportesInventario.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.grupoReportesInventario.TitleStyleMouseOver.Class = "";
-            this.grupoReportesInventario.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // ribbonPanel3
             // 
@@ -680,6 +511,9 @@
             this.grupoConfigAdmin.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.grupoConfigAdmin.ContainerControlProcessDialogKey = true;
             resources.ApplyResources(this.grupoConfigAdmin, "grupoConfigAdmin");
+            this.grupoConfigAdmin.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnMenuConfigConta,
+            this.btnMenuConfigInv});
             this.grupoConfigAdmin.Name = "grupoConfigAdmin";
             this.grupoConfigAdmin.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             // 
@@ -692,6 +526,168 @@
             // 
             this.grupoConfigAdmin.TitleStyleMouseOver.Class = "";
             this.grupoConfigAdmin.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // btnMenuConfigConta
+            // 
+            this.btnMenuConfigConta.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuConfigConta.Image")));
+            this.btnMenuConfigConta.ImagePaddingHorizontal = 4;
+            this.btnMenuConfigConta.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnMenuConfigConta.Name = "btnMenuConfigConta";
+            this.btnMenuConfigConta.SubItemsExpandWidth = 14;
+            resources.ApplyResources(this.btnMenuConfigConta, "btnMenuConfigConta");
+            this.btnMenuConfigConta.Click += new System.EventHandler(this.menuConfigConta);
+            // 
+            // btnMenuConfigInv
+            // 
+            this.btnMenuConfigInv.Image = ((System.Drawing.Image)(resources.GetObject("btnMenuConfigInv.Image")));
+            this.btnMenuConfigInv.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnMenuConfigInv.Name = "btnMenuConfigInv";
+            this.btnMenuConfigInv.SubItemsExpandWidth = 14;
+            resources.ApplyResources(this.btnMenuConfigInv, "btnMenuConfigInv");
+            this.btnMenuConfigInv.Click += new System.EventHandler(this.menuConfigInvConta);
+            // 
+            // ribbonPanel1
+            // 
+            this.ribbonPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel1.Controls.Add(this.grupoCatalogos);
+            resources.ApplyResources(this.ribbonPanel1, "ribbonPanel1");
+            this.ribbonPanel1.Name = "ribbonPanel1";
+            // 
+            // 
+            // 
+            this.ribbonPanel1.Style.Class = "";
+            this.ribbonPanel1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel1.StyleMouseDown.Class = "";
+            this.ribbonPanel1.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel1.StyleMouseOver.Class = "";
+            this.ribbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // grupoCatalogos
+            // 
+            this.grupoCatalogos.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.grupoCatalogos.BackgroundMouseOverStyle.Class = "";
+            this.grupoCatalogos.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.grupoCatalogos.BackgroundStyle.Class = "";
+            this.grupoCatalogos.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.grupoCatalogos.ContainerControlProcessDialogKey = true;
+            resources.ApplyResources(this.grupoCatalogos, "grupoCatalogos");
+            this.grupoCatalogos.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnCatalogoCuentas});
+            this.grupoCatalogos.Name = "grupoCatalogos";
+            this.grupoCatalogos.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            // 
+            // 
+            // 
+            this.grupoCatalogos.TitleStyle.Class = "";
+            this.grupoCatalogos.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.grupoCatalogos.TitleStyleMouseOver.Class = "";
+            this.grupoCatalogos.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // btnCatalogoCuentas
+            // 
+            this.btnCatalogoCuentas.Image = global::DDSIC.Properties.Resources.libro_diario;
+            this.btnCatalogoCuentas.ImageFixedSize = new System.Drawing.Size(64, 64);
+            this.btnCatalogoCuentas.ImageListSizeSelection = DevComponents.DotNetBar.eButtonImageListSelection.Default;
+            this.btnCatalogoCuentas.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnCatalogoCuentas.Name = "btnCatalogoCuentas";
+            this.btnCatalogoCuentas.SubItemsExpandWidth = 14;
+            resources.ApplyResources(this.btnCatalogoCuentas, "btnCatalogoCuentas");
+            this.btnCatalogoCuentas.Click += new System.EventHandler(this.menuCatalogoCuentas);
+            // 
+            // ribbonPanel4
+            // 
+            this.ribbonPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel4.Controls.Add(this.ribbonBar1);
+            this.ribbonPanel4.Controls.Add(this.grupoReportesConta);
+            this.ribbonPanel4.Controls.Add(this.grupoReportesInventario);
+            resources.ApplyResources(this.ribbonPanel4, "ribbonPanel4");
+            this.ribbonPanel4.Name = "ribbonPanel4";
+            // 
+            // 
+            // 
+            this.ribbonPanel4.Style.Class = "";
+            this.ribbonPanel4.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel4.StyleMouseDown.Class = "";
+            this.ribbonPanel4.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel4.StyleMouseOver.Class = "";
+            this.ribbonPanel4.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // grupoReportesConta
+            // 
+            this.grupoReportesConta.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.grupoReportesConta.BackgroundMouseOverStyle.Class = "";
+            this.grupoReportesConta.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.grupoReportesConta.BackgroundStyle.Class = "";
+            this.grupoReportesConta.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.grupoReportesConta.ContainerControlProcessDialogKey = true;
+            resources.ApplyResources(this.grupoReportesConta, "grupoReportesConta");
+            this.grupoReportesConta.Name = "grupoReportesConta";
+            this.grupoReportesConta.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            // 
+            // 
+            // 
+            this.grupoReportesConta.TitleStyle.Class = "";
+            this.grupoReportesConta.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.grupoReportesConta.TitleStyleMouseOver.Class = "";
+            this.grupoReportesConta.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // grupoReportesInventario
+            // 
+            this.grupoReportesInventario.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.grupoReportesInventario.BackgroundMouseOverStyle.Class = "";
+            this.grupoReportesInventario.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.grupoReportesInventario.BackgroundStyle.Class = "";
+            this.grupoReportesInventario.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.grupoReportesInventario.ContainerControlProcessDialogKey = true;
+            resources.ApplyResources(this.grupoReportesInventario, "grupoReportesInventario");
+            this.grupoReportesInventario.Name = "grupoReportesInventario";
+            this.grupoReportesInventario.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            // 
+            // 
+            // 
+            this.grupoReportesInventario.TitleStyle.Class = "";
+            this.grupoReportesInventario.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.grupoReportesInventario.TitleStyleMouseOver.Class = "";
+            this.grupoReportesInventario.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // ribbonPanel6
             // 
@@ -769,13 +765,13 @@
             // 
             // moduloCATALOGOS
             // 
-            this.moduloCATALOGOS.Checked = true;
             this.moduloCATALOGOS.Name = "moduloCATALOGOS";
             this.moduloCATALOGOS.Panel = this.ribbonPanel1;
             resources.ApplyResources(this.moduloCATALOGOS, "moduloCATALOGOS");
             // 
             // moduloTAREAS
             // 
+            this.moduloTAREAS.Checked = true;
             this.moduloTAREAS.Name = "moduloTAREAS";
             this.moduloTAREAS.Panel = this.ribbonPanel7;
             resources.ApplyResources(this.moduloTAREAS, "moduloTAREAS");
@@ -1048,6 +1044,34 @@
             this.buttonItem47.SubItemsExpandWidth = 14;
             resources.ApplyResources(this.buttonItem47, "buttonItem47");
             // 
+            // ribbonBar1
+            // 
+            this.ribbonBar1.AutoOverflowEnabled = true;
+            // 
+            // 
+            // 
+            this.ribbonBar1.BackgroundMouseOverStyle.Class = "";
+            this.ribbonBar1.BackgroundMouseOverStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonBar1.BackgroundStyle.Class = "";
+            this.ribbonBar1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonBar1.ContainerControlProcessDialogKey = true;
+            resources.ApplyResources(this.ribbonBar1, "ribbonBar1");
+            this.ribbonBar1.Name = "ribbonBar1";
+            this.ribbonBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            // 
+            // 
+            // 
+            this.ribbonBar1.TitleStyle.Class = "";
+            this.ribbonBar1.TitleStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonBar1.TitleStyleMouseOver.Class = "";
+            this.ribbonBar1.TitleStyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
             // HOME
             // 
             resources.ApplyResources(this, "$this");
@@ -1065,10 +1089,10 @@
             this.STATUS_BAR.PerformLayout();
             this.MENU_PRINCIPAL.ResumeLayout(false);
             this.MENU_PRINCIPAL.PerformLayout();
-            this.ribbonPanel1.ResumeLayout(false);
             this.ribbonPanel7.ResumeLayout(false);
-            this.ribbonPanel4.ResumeLayout(false);
             this.ribbonPanel3.ResumeLayout(false);
+            this.ribbonPanel1.ResumeLayout(false);
+            this.ribbonPanel4.ResumeLayout(false);
             this.ribbonPanel6.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1101,7 +1125,6 @@
         private DevComponents.DotNetBar.RibbonControl MENU_PRINCIPAL;
         private DevComponents.DotNetBar.RibbonPanel ribbonPanel1;
         private DevComponents.DotNetBar.RibbonBar grupoCatalogos;
-        private DevComponents.DotNetBar.RibbonBar grupoClientes;
         private DevComponents.DotNetBar.RibbonPanel ribbonPanel4;
         private DevComponents.DotNetBar.RibbonBar grupoReportesConta;
         private DevComponents.DotNetBar.RibbonBar grupoReportesInventario;
@@ -1155,6 +1178,9 @@
         private DevComponents.DotNetBar.ButtonItem btnContabilizarTrans;
         private DevComponents.DotNetBar.ButtonItem buttonItem15;
         private DevComponents.DotNetBar.ButtonItem btnCatalogoCuentas;
+        private DevComponents.DotNetBar.ButtonItem btnMenuConfigConta;
+        private DevComponents.DotNetBar.ButtonItem btnMenuConfigInv;
+        private DevComponents.DotNetBar.RibbonBar ribbonBar1;
 
     }
 }

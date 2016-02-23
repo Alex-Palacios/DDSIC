@@ -66,7 +66,7 @@ namespace DDSIC.Tareas
                 CATALOGO.Columns.Add("COD_CTA");
                 CATALOGO.Columns.Add("NOMBRE");
                 CATALOGO.Columns.Add("MAYOR");
-                CATALOGO.Columns.Add("MAYOR");
+                CATALOGO.Columns.Add("SALDO");
                 CATALOGO.Columns.Add("CATEGORIA");
                 CATALOGO.Columns.Add("TIPO");
                 CATALOGO.Columns.Add("ACTIVA");
