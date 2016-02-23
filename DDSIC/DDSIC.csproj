@@ -13,7 +13,7 @@
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publicar\</PublishUrl>
-    <Install>true</Install>
+    <Install>false</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
@@ -26,7 +26,7 @@
     <ProductName>DDSIC</ProductName>
     <PublisherName>GRUPO DDICARK S.A de C.V</PublisherName>
     <SuiteName>SISTEMA CONTABLE GRUPO D´DICARK S.A de C.V</SuiteName>
-    <ApplicationRevision>16</ApplicationRevision>
+    <ApplicationRevision>17</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -65,15 +65,19 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>icono_balanza.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ControlesPersonalizados">
-      <HintPath>..\..\ControlesPersonalizados\ControlesPersonalizados\bin\Debug\ControlesPersonalizados.dll</HintPath>
-    </Reference>
     <Reference Include="DevComponents.DotNetBar.Design">
       <HintPath>..\..\..\Code Snippets\Personalizado\DotNetBar\DevComponents.DotNetBar.Design.dll</HintPath>
     </Reference>
@@ -118,6 +122,18 @@
     <Compile Include="Catalogos\CuentaForm.Designer.cs">
       <DependentUpon>CuentaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Configuracion\ConfigCtaInvForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuracion\ConfigCtaInvForm.Designer.cs">
+      <DependentUpon>ConfigCtaInvForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuracion\ConfigCuentasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuracion\ConfigCuentasForm.Designer.cs">
+      <DependentUpon>ConfigCuentasForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="HOME.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +170,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Catalogo.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\LibroDiarioAuxiliarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\LibroDiarioAuxiliarForm.Designer.cs">
+      <DependentUpon>LibroDiarioAuxiliarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\RptLibroDiarioForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\RptLibroDiarioForm.Designer.cs">
+      <DependentUpon>RptLibroDiarioForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\RptLibroMayorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\RptLibroMayorForm.Designer.cs">
+      <DependentUpon>RptLibroMayorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,14 +200,32 @@
     <Compile Include="Tareas\ConfirmarPartida.Designer.cs">
       <DependentUpon>ConfirmarPartida.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tareas\ContabilizarTransForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tareas\ContabilizarTransForm.Designer.cs">
+      <DependentUpon>ContabilizarTransForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tareas\PartidaDiariaForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Tareas\PartidaDiariaForm.Designer.cs">
       <DependentUpon>PartidaDiariaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tareas\PreviewPartidaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tareas\PreviewPartidaForm.Designer.cs">
+      <DependentUpon>PreviewPartidaForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Catalogos\CuentaForm.resx">
       <DependentUpon>CuentaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuracion\ConfigCtaInvForm.resx">
+      <DependentUpon>ConfigCtaInvForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuracion\ConfigCuentasForm.resx">
+      <DependentUpon>ConfigCuentasForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HOME.resx">
       <DependentUpon>HOME.cs</DependentUpon>
@@ -193,16 +245,31 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Informes\CatalogoCuenta.rdlc" />
+    <EmbeddedResource Include="Reportes\LibroDiarioAuxiliarForm.resx">
+      <DependentUpon>LibroDiarioAuxiliarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RptLibroDiarioForm.resx">
+      <DependentUpon>RptLibroDiarioForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RptLibroMayorForm.resx">
+      <DependentUpon>RptLibroMayorForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tareas\ConfirmarPartida.resx">
       <DependentUpon>ConfirmarPartida.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Tareas\ContabilizarTransForm.resx">
+      <DependentUpon>ContabilizarTransForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tareas\PartidaDiariaForm.resx">
       <DependentUpon>PartidaDiariaForm.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="DDSIC_ClaveTemporal.pfx" />
+    <EmbeddedResource Include="Tareas\PreviewPartidaForm.resx">
+      <DependentUpon>PreviewPartidaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -234,8 +301,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Ayuda\" />
-    <Folder Include="Configuracion\" />
-    <Folder Include="Reportes\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\new.jpg" />
@@ -419,6 +484,7 @@
   <ItemGroup>
     <Content Include="icono_balanza.ico" />
     <Content Include="logo.ico" />
+    <None Include="Resources\calculadora.png" />
     <None Include="Resources\Startup_Ubuntu.wav" />
     <None Include="Resources\Ecommerce-Return-icon.png" />
     <None Include="Resources\returns.jpg" />
@@ -436,6 +502,10 @@
     <None Include="Resources\process.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\ControlesPersonalizados\ControlesPersonalizados.csproj">
+      <Project>{eb2f7811-97eb-4482-b608-bcb034b8e26e}</Project>
+      <Name>ControlesPersonalizados</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DDB\DDB.csproj">
       <Project>{0d227cd0-3855-4004-ac9b-008a7a2b1a39}</Project>
       <Name>DDB</Name>

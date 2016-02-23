@@ -9,8 +9,17 @@ namespace MODELO
 
     public enum eTransaccion
     {
-        PARTIDA= 1,
-
+        PARTIDA = 1,
+        COMPRA,
+        VENTA,
+        PRESTAMO,
+        PAC,
+        PAGO,
+        COBRO,
+        GASTO,
+        CAJA,
+        VENCIDO,
+        REACTIVACION
     }
 
     public enum eSistema
@@ -18,6 +27,17 @@ namespace MODELO
         DDSIC,
         PRENDASAL,
         KAROL
+    }
+
+
+    public enum eCategoriaInv
+    {
+        ORO,
+        ARTICULO,
+        CALZADO,
+        CARTERA,
+        ROPA,
+        MOCHILA
     }
 
 
@@ -87,20 +107,23 @@ namespace MODELO
     public enum eTipoCuenta
     {
         ND,
-        EFECTIVO,
+        CAJA,
+        BANCO,
         CxC,
         OTRO_ACTIVO,
         INVENTARIO,
         ACTIVO_FIJO,
         DEPRECIACION,
         CxP,
+        IMPUESTO,
         UTILIDAD,
         CAPITAL,
         GASTO,
         COSTO,
         INGRESO,
         TRANSITORIA,
-        ORDEN
+        CO,
+        COxC
     }
 
     public enum eClaseCuenta
@@ -116,6 +139,7 @@ namespace MODELO
         DEUDOR = 'D',
         ACREEDOR = 'A',
     }
+
 
 
 

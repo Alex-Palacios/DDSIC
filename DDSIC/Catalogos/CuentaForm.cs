@@ -79,8 +79,9 @@ namespace DDSIC.Catalogos
             R.SetField<bool>("ACTIVA", true);
             R.SetField<string>("CLASE", "----");
             ((DataTable)cbxMayor.DataSource).Rows.InsertAt(R, 0);
+            cbxMayor.SelectedIndex = 0;
 
-
+            
             switch (ACCION)
             {
                 case eOperacion.INSERT:

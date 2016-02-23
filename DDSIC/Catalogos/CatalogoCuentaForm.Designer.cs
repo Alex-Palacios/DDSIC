@@ -29,16 +29,24 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CatalogoCuentaForm));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuVentana = new System.Windows.Forms.ToolStrip();
+            this.btnNuevo = new System.Windows.Forms.ToolStripButton();
+            this.btnImportarExcel = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnCambiarKEY = new System.Windows.Forms.ToolStripButton();
+            this.btnEditar = new System.Windows.Forms.ToolStripButton();
+            this.btnCambiarEstado = new System.Windows.Forms.ToolStripButton();
+            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.btnExportExcel = new System.Windows.Forms.ToolStripButton();
+            this.btnAyuda = new System.Windows.Forms.ToolStripButton();
             this.treeListCatalogo = new BrightIdeasSoftware.TreeListView();
             this.TreCodigo = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
             this.TreCuenta = ((BrightIdeasSoftware.OLVColumn)(new BrightIdeasSoftware.OLVColumn()));
@@ -49,15 +57,6 @@
             this.txtFiltroCodigo = new System.Windows.Forms.TextBox();
             this.lbTotalCuentas = new System.Windows.Forms.Label();
             this.tblCatalogo = new System.Windows.Forms.DataGridView();
-            this.pagTreeTable = new System.Windows.Forms.TabPage();
-            this.btnNuevo = new System.Windows.Forms.ToolStripButton();
-            this.btnImportarExcel = new System.Windows.Forms.ToolStripButton();
-            this.btnCambiarKEY = new System.Windows.Forms.ToolStripButton();
-            this.btnEditar = new System.Windows.Forms.ToolStripButton();
-            this.btnCambiarEstado = new System.Windows.Forms.ToolStripButton();
-            this.btnEliminar = new System.Windows.Forms.ToolStripButton();
-            this.btnExportExcel = new System.Windows.Forms.ToolStripButton();
-            this.btnAyuda = new System.Windows.Forms.ToolStripButton();
             this.COD_CTA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NOMBRE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MAYOR = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,6 +65,7 @@
             this.SALDO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CLASE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ACTIVA = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.pagTreeTable = new System.Windows.Forms.TabPage();
             this.menuVentana.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.treeListCatalogo)).BeginInit();
             this.tabCatalogo.SuspendLayout();
@@ -95,15 +95,100 @@
             this.menuVentana.TabIndex = 0;
             this.menuVentana.Text = "toolStrip1";
             // 
+            // btnNuevo
+            // 
+            this.btnNuevo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnNuevo.Image = global::DDSIC.Properties.Resources._new;
+            this.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(23, 22);
+            this.btnNuevo.Text = "&Nueva Cuenta";
+            this.btnNuevo.Click += new System.EventHandler(this.NUEVO);
+            // 
+            // btnImportarExcel
+            // 
+            this.btnImportarExcel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnImportarExcel.Image = global::DDSIC.Properties.Resources.ImportExcel32;
+            this.btnImportarExcel.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnImportarExcel.Name = "btnImportarExcel";
+            this.btnImportarExcel.Size = new System.Drawing.Size(23, 22);
+            this.btnImportarExcel.Text = "Importar";
+            this.btnImportarExcel.ToolTipText = "Importar desde Excel";
+            this.btnImportarExcel.Click += new System.EventHandler(this.IMPORTAR_CATALOGO);
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
+            // btnCambiarKEY
+            // 
+            this.btnCambiarKEY.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnCambiarKEY.Image = global::DDSIC.Properties.Resources.llave;
+            this.btnCambiarKEY.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCambiarKEY.Name = "btnCambiarKEY";
+            this.btnCambiarKEY.Size = new System.Drawing.Size(23, 22);
+            this.btnCambiarKEY.Text = "Cambiar Codigo";
+            this.btnCambiarKEY.ToolTipText = "Cambiar Codigo Cuenta";
+            this.btnCambiarKEY.Click += new System.EventHandler(this.CHANGE_KEY);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnEditar.Image = global::DDSIC.Properties.Resources.gtk_edit;
+            this.btnEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(23, 22);
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.ToolTipText = "Editar";
+            this.btnEditar.Click += new System.EventHandler(this.EDITAR);
+            // 
+            // btnCambiarEstado
+            // 
+            this.btnCambiarEstado.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnCambiarEstado.Image = global::DDSIC.Properties.Resources.activar_desactivar;
+            this.btnCambiarEstado.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCambiarEstado.Name = "btnCambiarEstado";
+            this.btnCambiarEstado.Size = new System.Drawing.Size(23, 22);
+            this.btnCambiarEstado.Text = "Activar/Desactivar";
+            this.btnCambiarEstado.ToolTipText = "Activar/Desactivar";
+            this.btnCambiarEstado.Click += new System.EventHandler(this.CHANGE_ESTADO);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnEliminar.Image = global::DDSIC.Properties.Resources.eliminar;
+            this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(23, 22);
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.ToolTipText = "Eliminar";
+            this.btnEliminar.Click += new System.EventHandler(this.ELIMINAR);
+            // 
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
             this.toolStripSeparator.Size = new System.Drawing.Size(6, 25);
+            // 
+            // btnExportExcel
+            // 
+            this.btnExportExcel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnExportExcel.Image = ((System.Drawing.Image)(resources.GetObject("btnExportExcel.Image")));
+            this.btnExportExcel.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnExportExcel.Name = "btnExportExcel";
+            this.btnExportExcel.Size = new System.Drawing.Size(23, 22);
+            this.btnExportExcel.Text = "Exportar Excel";
+            this.btnExportExcel.Click += new System.EventHandler(this.EXPORTAR);
+            // 
+            // btnAyuda
+            // 
+            this.btnAyuda.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnAyuda.Image = global::DDSIC.Properties.Resources.help;
+            this.btnAyuda.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(23, 22);
+            this.btnAyuda.Text = "Ay&uda";
+            this.btnAyuda.Click += new System.EventHandler(this.AYUDA);
             // 
             // treeListCatalogo
             // 
@@ -121,7 +206,7 @@
             this.treeListCatalogo.Name = "treeListCatalogo";
             this.treeListCatalogo.OwnerDraw = true;
             this.treeListCatalogo.ShowGroups = false;
-            this.treeListCatalogo.Size = new System.Drawing.Size(755, 353);
+            this.treeListCatalogo.Size = new System.Drawing.Size(856, 353);
             this.treeListCatalogo.TabIndex = 1;
             this.treeListCatalogo.UseCompatibleStateImageBehavior = false;
             this.treeListCatalogo.View = System.Windows.Forms.View.Details;
@@ -204,6 +289,7 @@
             // 
             this.tblCatalogo.AllowUserToAddRows = false;
             this.tblCatalogo.AllowUserToDeleteRows = false;
+            this.tblCatalogo.BackgroundColor = System.Drawing.Color.DarkSeaGreen;
             this.tblCatalogo.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -236,103 +322,6 @@
             this.tblCatalogo.DataSourceChanged += new System.EventHandler(this.tblCatalogo_DataSourceChanged);
             this.tblCatalogo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblCatalogo_CellClick);
             this.tblCatalogo.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.tblCatalogo_CellFormatting);
-            // 
-            // pagTreeTable
-            // 
-            this.pagTreeTable.Controls.Add(this.treeListCatalogo);
-            this.pagTreeTable.ImageKey = "(ninguno)";
-            this.pagTreeTable.Location = new System.Drawing.Point(4, 22);
-            this.pagTreeTable.Name = "pagTreeTable";
-            this.pagTreeTable.Padding = new System.Windows.Forms.Padding(3);
-            this.pagTreeTable.Size = new System.Drawing.Size(761, 359);
-            this.pagTreeTable.TabIndex = 0;
-            this.pagTreeTable.Text = "Arbol";
-            this.pagTreeTable.UseVisualStyleBackColor = true;
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnNuevo.Image = global::DDSIC.Properties.Resources._new;
-            this.btnNuevo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(23, 22);
-            this.btnNuevo.Text = "&Nueva Cuenta";
-            this.btnNuevo.Click += new System.EventHandler(this.NUEVO);
-            // 
-            // btnImportarExcel
-            // 
-            this.btnImportarExcel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnImportarExcel.Image = global::DDSIC.Properties.Resources.ImportExcel32;
-            this.btnImportarExcel.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnImportarExcel.Name = "btnImportarExcel";
-            this.btnImportarExcel.Size = new System.Drawing.Size(23, 22);
-            this.btnImportarExcel.Text = "Importar";
-            this.btnImportarExcel.ToolTipText = "Importar desde Excel";
-            this.btnImportarExcel.Click += new System.EventHandler(this.IMPORTAR_CATALOGO);
-            // 
-            // btnCambiarKEY
-            // 
-            this.btnCambiarKEY.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnCambiarKEY.Image = global::DDSIC.Properties.Resources.llave;
-            this.btnCambiarKEY.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCambiarKEY.Name = "btnCambiarKEY";
-            this.btnCambiarKEY.Size = new System.Drawing.Size(23, 22);
-            this.btnCambiarKEY.Text = "Cambiar Codigo";
-            this.btnCambiarKEY.ToolTipText = "Cambiar Codigo Cuenta";
-            this.btnCambiarKEY.Click += new System.EventHandler(this.CHANGE_KEY);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnEditar.Image = global::DDSIC.Properties.Resources.gtk_edit;
-            this.btnEditar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(23, 22);
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.ToolTipText = "Editar";
-            this.btnEditar.Click += new System.EventHandler(this.EDITAR);
-            // 
-            // btnCambiarEstado
-            // 
-            this.btnCambiarEstado.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnCambiarEstado.Image = global::DDSIC.Properties.Resources.activar_desactivar;
-            this.btnCambiarEstado.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCambiarEstado.Name = "btnCambiarEstado";
-            this.btnCambiarEstado.Size = new System.Drawing.Size(23, 22);
-            this.btnCambiarEstado.Text = "Activar/Desactivar";
-            this.btnCambiarEstado.ToolTipText = "Activar/Desactivar";
-            this.btnCambiarEstado.Click += new System.EventHandler(this.CHANGE_ESTADO);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnEliminar.Image = global::DDSIC.Properties.Resources.eliminar;
-            this.btnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(23, 22);
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.ToolTipText = "Eliminar";
-            this.btnEliminar.Click += new System.EventHandler(this.ELIMINAR);
-            // 
-            // btnExportExcel
-            // 
-            this.btnExportExcel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnExportExcel.Image = ((System.Drawing.Image)(resources.GetObject("btnExportExcel.Image")));
-            this.btnExportExcel.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnExportExcel.Name = "btnExportExcel";
-            this.btnExportExcel.Size = new System.Drawing.Size(23, 22);
-            this.btnExportExcel.Text = "Exportar Excel";
-            this.btnExportExcel.Click += new System.EventHandler(this.EXPORTAR);
-            // 
-            // btnAyuda
-            // 
-            this.btnAyuda.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnAyuda.Image = global::DDSIC.Properties.Resources.help;
-            this.btnAyuda.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnAyuda.Name = "btnAyuda";
-            this.btnAyuda.Size = new System.Drawing.Size(23, 22);
-            this.btnAyuda.Text = "Ay&uda";
-            this.btnAyuda.Click += new System.EventHandler(this.AYUDA);
             // 
             // COD_CTA
             // 
@@ -414,11 +403,23 @@
             this.ACTIVA.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.ACTIVA.Width = 30;
             // 
+            // pagTreeTable
+            // 
+            this.pagTreeTable.Controls.Add(this.treeListCatalogo);
+            this.pagTreeTable.ImageKey = "(ninguno)";
+            this.pagTreeTable.Location = new System.Drawing.Point(4, 22);
+            this.pagTreeTable.Name = "pagTreeTable";
+            this.pagTreeTable.Padding = new System.Windows.Forms.Padding(3);
+            this.pagTreeTable.Size = new System.Drawing.Size(862, 359);
+            this.pagTreeTable.TabIndex = 0;
+            this.pagTreeTable.Text = "Arbol";
+            this.pagTreeTable.UseVisualStyleBackColor = true;
+            // 
             // CatalogoCuentaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(882, 410);
             this.Controls.Add(this.tabCatalogo);
             this.Controls.Add(this.menuVentana);

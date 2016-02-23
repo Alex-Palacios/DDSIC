@@ -331,6 +331,92 @@ namespace DDB
 
 
 
+        //CONTABILIZAR TRANSACCIONES
+
+
+        public DataTable getTransPendientes(eSistema sistema , string sucursal,DateTime desde , DateTime hasta)
+        {
+            MySqlDataReader reader;
+            DataTable datos = new DataTable();
+            try
+            {
+                string sql = "ddsic.SP_GET_TRANS_PENDIENTES;";
+                MySqlCommand cmd = new MySqlCommand(sql, conn.conection);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                MySqlParameter sys = cmd.Parameters.Add("sys", MySqlDbType.VarChar, 20);
+                sys.Direction = ParameterDirection.Input;
+                MySqlParameter suc = cmd.Parameters.Add("suc", MySqlDbType.VarChar, 2);
+                suc.Direction = ParameterDirection.Input;
+                MySqlParameter inicio = cmd.Parameters.Add("inicio", MySqlDbType.Date);
+                inicio.Direction = ParameterDirection.Input;
+                MySqlParameter fin = cmd.Parameters.Add("fin", MySqlDbType.Date);
+                fin.Direction = ParameterDirection.Input;
+
+                sys.Value = sistema.ToString();
+                suc.Value = sucursal;
+                inicio.Value = desde.Date;
+                fin.Value = hasta.Date;
+
+                reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    datos.Load(reader);
+                }
+                reader.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "ERROR AL CONSULTAR TRANSACCIONES DE " + sistema.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return datos;
+        }
+
+
+
+
+
+        public DataTable getPreviewPartida(eSistema sistema, string transaccion, string codigo)
+        {
+            MySqlDataReader reader;
+            DataTable datos = new DataTable();
+            try
+            {
+                string sql = "ddsic.SP_GET_PREVIEW_PARTIDA;";
+                MySqlCommand cmd = new MySqlCommand(sql, conn.conection);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                MySqlParameter sys = cmd.Parameters.Add("sys", MySqlDbType.VarChar, 20);
+                sys.Direction = ParameterDirection.Input;
+                MySqlParameter tipo = cmd.Parameters.Add("tipo", MySqlDbType.VarChar, 50);
+                tipo.Direction = ParameterDirection.Input;
+                MySqlParameter trans = cmd.Parameters.Add("trans", MySqlDbType.VarChar, 15);
+                trans.Direction = ParameterDirection.Input;
+
+                sys.Value = sistema.ToString();
+                tipo.Value = transaccion;
+                trans.Value = codigo;
+
+                reader = cmd.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    datos.Load(reader);
+                }
+                reader.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "ERROR AL OBTENER PREVIEW DE PARTIDA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return datos;
+        }
+
+
+
+
+
+
+        //REPORTES
 
 
         public DataTable getLIBRO_DIARIO(int periodo)

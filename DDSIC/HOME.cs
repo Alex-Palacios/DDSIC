@@ -355,12 +355,47 @@ namespace DDSIC
                 partida.WindowState = FormWindowState.Normal;
             }
         }
-        
 
+        private void menuTareasContabilizarTrans(object sender, EventArgs e)
+        {
+            Tareas.ContabilizarTransForm contabilizar;
+            contabilizar = Tareas.ContabilizarTransForm.Instance();
+            contabilizar.MdiParent = this;
+            contabilizar.Show();
+            if (contabilizar.WindowState == FormWindowState.Minimized)
+            {
+                contabilizar.WindowState = FormWindowState.Normal;
+            }
+        }
 
 
         // MENU CONFIGURACION
-        
+        private void menuConfigConta(object sender, EventArgs e)
+        {
+            Configuracion.ConfigCuentasForm conta;
+            conta = Configuracion.ConfigCuentasForm.Instance();
+            conta.MdiParent = this;
+            conta.Show();
+            if (conta.WindowState == FormWindowState.Minimized)
+            {
+                conta.WindowState = FormWindowState.Normal;
+            }
+        }
+
+
+        private void menuConfigInvConta(object sender, EventArgs e)
+        {
+            Configuracion.ConfigCtaInvForm contaInv;
+            contaInv = Configuracion.ConfigCtaInvForm.Instance();
+            contaInv.MdiParent = this;
+            contaInv.Show();
+            if (contaInv.WindowState == FormWindowState.Minimized)
+            {
+                contaInv.WindowState = FormWindowState.Normal;
+            }
+        }
+
+
 
         // MENU REPORTES
         

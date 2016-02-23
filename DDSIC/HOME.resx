@@ -120,11 +120,35 @@
   <metadata name="STATUS_BAR.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="STATUS_BAR.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 666</value>
+  </data>
+  <data name="STATUS_BAR.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1046, 22</value>
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="STATUS_BAR.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="STATUS_BAR.Text" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <data name="&gt;&gt;STATUS_BAR.Name" xml:space="preserve">
+    <value>STATUS_BAR</value>
+  </data>
+  <data name="&gt;&gt;STATUS_BAR.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;STATUS_BAR.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;STATUS_BAR.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="statusLabelFecha.AutoSize" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="statusLabelFecha.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 17</value>
   </data>
@@ -170,6 +194,15 @@
   <data name="progressBarStatus.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 16</value>
   </data>
+  <data name="toolStripDropDownButton1.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value>Magenta</value>
+  </data>
+  <data name="toolStripDropDownButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>13, 20</value>
+  </data>
+  <data name="toolStripDropDownButton1.Text" xml:space="preserve">
+    <value>toolStripDropDownButton1</value>
+  </data>
   <data name="minimizarToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>157, 22</value>
   </data>
@@ -194,39 +227,6 @@
   <data name="paraleloToolStripMenuItem.Text" xml:space="preserve">
     <value>Paralelo</value>
   </data>
-  <data name="toolStripDropDownButton1.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
-    <value>Magenta</value>
-  </data>
-  <data name="toolStripDropDownButton1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>13, 20</value>
-  </data>
-  <data name="toolStripDropDownButton1.Text" xml:space="preserve">
-    <value>toolStripDropDownButton1</value>
-  </data>
-  <data name="STATUS_BAR.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 666</value>
-  </data>
-  <data name="STATUS_BAR.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1046, 22</value>
-  </data>
-  <data name="STATUS_BAR.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="STATUS_BAR.Text" xml:space="preserve">
-    <value>statusStrip1</value>
-  </data>
-  <data name="&gt;&gt;STATUS_BAR.Name" xml:space="preserve">
-    <value>STATUS_BAR</value>
-  </data>
-  <data name="&gt;&gt;STATUS_BAR.Type" xml:space="preserve">
-    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;STATUS_BAR.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;STATUS_BAR.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="btnConfigConexionDB.Text" xml:space="preserve">
     <value>Base de Datos</value>
   </data>
@@ -246,90 +246,6 @@
     <value>Acerca de...</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="grupoCatalogos.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="btnCatalogoCuentas.Text" xml:space="preserve">
-    <value>Catalogo Cuentas</value>
-  </data>
-  <data name="grupoCatalogos.Location" type="System.Drawing.Point, System.Drawing">
-    <value>275, 0</value>
-  </data>
-  <data name="grupoCatalogos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>360, 102</value>
-  </data>
-  <data name="grupoCatalogos.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="grupoCatalogos.Text" xml:space="preserve">
-    <value>Catalogos</value>
-  </data>
-  <data name="&gt;&gt;grupoCatalogos.Name" xml:space="preserve">
-    <value>grupoCatalogos</value>
-  </data>
-  <data name="&gt;&gt;grupoCatalogos.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.RibbonBar, DevComponents.DotNetBar2, Version=8.8.0.0, Culture=neutral, PublicKeyToken=e116d99a00eca71b</value>
-  </data>
-  <data name="&gt;&gt;grupoCatalogos.Parent" xml:space="preserve">
-    <value>ribbonPanel1</value>
-  </data>
-  <data name="&gt;&gt;grupoCatalogos.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="grupoClientes.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="grupoClientes.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 0</value>
-  </data>
-  <data name="grupoClientes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>272, 102</value>
-  </data>
-  <data name="grupoClientes.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="grupoClientes.Text" xml:space="preserve">
-    <value>Carteras</value>
-  </data>
-  <data name="&gt;&gt;grupoClientes.Name" xml:space="preserve">
-    <value>grupoClientes</value>
-  </data>
-  <data name="&gt;&gt;grupoClientes.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.RibbonBar, DevComponents.DotNetBar2, Version=8.8.0.0, Culture=neutral, PublicKeyToken=e116d99a00eca71b</value>
-  </data>
-  <data name="&gt;&gt;grupoClientes.Parent" xml:space="preserve">
-    <value>ribbonPanel1</value>
-  </data>
-  <data name="&gt;&gt;grupoClientes.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="ribbonPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="ribbonPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 56</value>
-  </data>
-  <data name="ribbonPanel1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 0, 3, 3</value>
-  </data>
-  <data name="ribbonPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1046, 105</value>
-  </data>
-  <data name="ribbonPanel1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;ribbonPanel1.Name" xml:space="preserve">
-    <value>ribbonPanel1</value>
-  </data>
-  <data name="&gt;&gt;ribbonPanel1.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.RibbonPanel, DevComponents.DotNetBar2, Version=8.8.0.0, Culture=neutral, PublicKeyToken=e116d99a00eca71b</value>
-  </data>
-  <data name="&gt;&gt;ribbonPanel1.Parent" xml:space="preserve">
-    <value>MENU_PRINCIPAL</value>
-  </data>
-  <data name="&gt;&gt;ribbonPanel1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="grupoAsientos.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
   </data>
@@ -597,9 +513,6 @@
         4kC7vKfn5q9MPSig9K+J4pzaePxcKsoqNo20PQweDVCHLBn/2Q==
 </value>
   </data>
-  <data name="buttonItem15.Text" xml:space="preserve">
-    <value>buttonItem15</value>
-  </data>
   <data name="btnContabilizarTrans.Text" xml:space="preserve">
     <value>Contabilizar</value>
   </data>
@@ -741,9 +654,6 @@
   <data name="ribbonPanel7.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
-  <data name="ribbonPanel7.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="&gt;&gt;ribbonPanel7.Name" xml:space="preserve">
     <value>ribbonPanel7</value>
   </data>
@@ -754,13 +664,40 @@
     <value>MENU_PRINCIPAL</value>
   </data>
   <data name="&gt;&gt;ribbonPanel7.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>0</value>
+  </data>
+  <data name="ribbonBar1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="ribbonBar1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>648, 0</value>
+  </data>
+  <data name="ribbonBar1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>365, 102</value>
+  </data>
+  <data name="ribbonBar1.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="ribbonBar1.Text" xml:space="preserve">
+    <value>REPORTES TRIBUTARIOS</value>
+  </data>
+  <data name="&gt;&gt;ribbonBar1.Name" xml:space="preserve">
+    <value>ribbonBar1</value>
+  </data>
+  <data name="&gt;&gt;ribbonBar1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.RibbonBar, DevComponents.DotNetBar2, Version=8.8.0.0, Culture=neutral, PublicKeyToken=e116d99a00eca71b</value>
+  </data>
+  <data name="&gt;&gt;ribbonBar1.Parent" xml:space="preserve">
+    <value>ribbonPanel4</value>
+  </data>
+  <data name="&gt;&gt;ribbonBar1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="grupoReportesConta.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
   </data>
   <data name="grupoReportesConta.Location" type="System.Drawing.Point, System.Drawing">
-    <value>388, 0</value>
+    <value>283, 0</value>
   </data>
   <data name="grupoReportesConta.Size" type="System.Drawing.Size, System.Drawing">
     <value>365, 102</value>
@@ -781,7 +718,7 @@
     <value>ribbonPanel4</value>
   </data>
   <data name="&gt;&gt;grupoReportesConta.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>1</value>
   </data>
   <data name="grupoReportesInventario.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
@@ -790,7 +727,7 @@
     <value>3, 0</value>
   </data>
   <data name="grupoReportesInventario.Size" type="System.Drawing.Size, System.Drawing">
-    <value>385, 102</value>
+    <value>280, 102</value>
   </data>
   <data name="grupoReportesInventario.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -808,7 +745,7 @@
     <value>ribbonPanel4</value>
   </data>
   <data name="&gt;&gt;grupoReportesInventario.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="ribbonPanel4.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -838,7 +775,7 @@
     <value>MENU_PRINCIPAL</value>
   </data>
   <data name="&gt;&gt;ribbonPanel4.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>1</value>
   </data>
   <data name="grupoConfigConexion.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
@@ -1779,7 +1716,7 @@
     <value>Permisos</value>
   </data>
   <data name="grupoConfigConexion.Location" type="System.Drawing.Point, System.Drawing">
-    <value>310, 0</value>
+    <value>283, 0</value>
   </data>
   <data name="grupoConfigConexion.Size" type="System.Drawing.Size, System.Drawing">
     <value>331, 102</value>
@@ -1805,11 +1742,127 @@
   <data name="grupoConfigAdmin.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
   </data>
+  <data name="btnMenuConfigConta.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        jLr7AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnMenuConfigConta.Text" xml:space="preserve">
+    <value>Cuentas</value>
+  </data>
+  <data name="btnMenuConfigInv.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        AElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnMenuConfigInv.Text" xml:space="preserve">
+    <value>Ctas. Inv</value>
+  </data>
   <data name="grupoConfigAdmin.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 0</value>
   </data>
   <data name="grupoConfigAdmin.Size" type="System.Drawing.Size, System.Drawing">
-    <value>307, 102</value>
+    <value>280, 102</value>
   </data>
   <data name="grupoConfigAdmin.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1857,7 +1910,7 @@
     <value>MENU_PRINCIPAL</value>
   </data>
   <data name="&gt;&gt;ribbonPanel3.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>2</value>
   </data>
   <data name="grupoAyudaInfo.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
@@ -2049,7 +2102,7 @@
     <value>3, 0</value>
   </data>
   <data name="grupoAyudaInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>322, 106</value>
+    <value>322, 102</value>
   </data>
   <data name="grupoAyudaInfo.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -2079,7 +2132,7 @@
     <value>3, 0, 3, 3</value>
   </data>
   <data name="ribbonPanel6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1046, 109</value>
+    <value>1046, 105</value>
   </data>
   <data name="ribbonPanel6.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -2097,7 +2150,67 @@
     <value>MENU_PRINCIPAL</value>
   </data>
   <data name="&gt;&gt;ribbonPanel6.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>3</value>
+  </data>
+  <data name="grupoCatalogos.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="btnCatalogoCuentas.Text" xml:space="preserve">
+    <value>Catalogo Cuentas</value>
+  </data>
+  <data name="grupoCatalogos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 0</value>
+  </data>
+  <data name="grupoCatalogos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>304, 102</value>
+  </data>
+  <data name="grupoCatalogos.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="grupoCatalogos.Text" xml:space="preserve">
+    <value>Catalogos</value>
+  </data>
+  <data name="&gt;&gt;grupoCatalogos.Name" xml:space="preserve">
+    <value>grupoCatalogos</value>
+  </data>
+  <data name="&gt;&gt;grupoCatalogos.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.RibbonBar, DevComponents.DotNetBar2, Version=8.8.0.0, Culture=neutral, PublicKeyToken=e116d99a00eca71b</value>
+  </data>
+  <data name="&gt;&gt;grupoCatalogos.Parent" xml:space="preserve">
+    <value>ribbonPanel1</value>
+  </data>
+  <data name="&gt;&gt;grupoCatalogos.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ribbonPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="ribbonPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 56</value>
+  </data>
+  <data name="ribbonPanel1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 0, 3, 3</value>
+  </data>
+  <data name="ribbonPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1046, 105</value>
+  </data>
+  <data name="ribbonPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="ribbonPanel1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;ribbonPanel1.Name" xml:space="preserve">
+    <value>ribbonPanel1</value>
+  </data>
+  <data name="&gt;&gt;ribbonPanel1.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.RibbonPanel, DevComponents.DotNetBar2, Version=8.8.0.0, Culture=neutral, PublicKeyToken=e116d99a00eca71b</value>
+  </data>
+  <data name="&gt;&gt;ribbonPanel1.Parent" xml:space="preserve">
+    <value>MENU_PRINCIPAL</value>
+  </data>
+  <data name="&gt;&gt;ribbonPanel1.ZOrder" xml:space="preserve">
+    <value>4</value>
   </data>
   <data name="MENU_PRINCIPAL.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Top</value>
@@ -2122,6 +2235,36 @@
   </data>
   <data name="MENU_PRINCIPAL.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 2</value>
+  </data>
+  <data name="office2007StartButton1.Text" xml:space="preserve">
+    <value>&amp;File</value>
+  </data>
+  <data name="buttonItem1.Text" xml:space="preserve">
+    <value>Vista</value>
+  </data>
+  <data name="MENU_PRINCIPAL.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1046, 163</value>
+  </data>
+  <data name="MENU_PRINCIPAL.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="MENU_PRINCIPAL.Text" xml:space="preserve">
+    <value>ribbonControl1</value>
+  </data>
+  <data name="&gt;&gt;MENU_PRINCIPAL.Name" xml:space="preserve">
+    <value>MENU_PRINCIPAL</value>
+  </data>
+  <data name="&gt;&gt;MENU_PRINCIPAL.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.RibbonControl, DevComponents.DotNetBar2, Version=8.8.0.0, Culture=neutral, PublicKeyToken=e116d99a00eca71b</value>
+  </data>
+  <data name="&gt;&gt;MENU_PRINCIPAL.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MENU_PRINCIPAL.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="buttonItem15.Text" xml:space="preserve">
+    <value>buttonItem15</value>
   </data>
   <data name="buttonItem2.Text" xml:space="preserve">
     <value>&amp;New</value>
@@ -2161,33 +2304,6 @@
   </data>
   <data name="buttonItem13.Text" xml:space="preserve">
     <value>E&amp;xit</value>
-  </data>
-  <data name="office2007StartButton1.Text" xml:space="preserve">
-    <value>&amp;File</value>
-  </data>
-  <data name="buttonItem1.Text" xml:space="preserve">
-    <value>Vista</value>
-  </data>
-  <data name="MENU_PRINCIPAL.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1046, 163</value>
-  </data>
-  <data name="MENU_PRINCIPAL.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="MENU_PRINCIPAL.Text" xml:space="preserve">
-    <value>ribbonControl1</value>
-  </data>
-  <data name="&gt;&gt;MENU_PRINCIPAL.Name" xml:space="preserve">
-    <value>MENU_PRINCIPAL</value>
-  </data>
-  <data name="&gt;&gt;MENU_PRINCIPAL.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.RibbonControl, DevComponents.DotNetBar2, Version=8.8.0.0, Culture=neutral, PublicKeyToken=e116d99a00eca71b</value>
-  </data>
-  <data name="&gt;&gt;MENU_PRINCIPAL.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;MENU_PRINCIPAL.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="buttonItem41.Text" xml:space="preserve">
     <value>Financiamiento</value>
@@ -2457,12 +2573,6 @@
   <data name="&gt;&gt;btnMenuAcercaDe.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=8.8.0.0, Culture=neutral, PublicKeyToken=e116d99a00eca71b</value>
   </data>
-  <data name="&gt;&gt;btnCatalogoCuentas.Name" xml:space="preserve">
-    <value>btnCatalogoCuentas</value>
-  </data>
-  <data name="&gt;&gt;btnCatalogoCuentas.Type" xml:space="preserve">
-    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=8.8.0.0, Culture=neutral, PublicKeyToken=e116d99a00eca71b</value>
-  </data>
   <data name="&gt;&gt;btnPartida.Name" xml:space="preserve">
     <value>btnPartida</value>
   </data>
@@ -2509,6 +2619,24 @@
     <value>buttonItem36</value>
   </data>
   <data name="&gt;&gt;buttonItem36.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=8.8.0.0, Culture=neutral, PublicKeyToken=e116d99a00eca71b</value>
+  </data>
+  <data name="&gt;&gt;btnMenuConfigConta.Name" xml:space="preserve">
+    <value>btnMenuConfigConta</value>
+  </data>
+  <data name="&gt;&gt;btnMenuConfigConta.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=8.8.0.0, Culture=neutral, PublicKeyToken=e116d99a00eca71b</value>
+  </data>
+  <data name="&gt;&gt;btnMenuConfigInv.Name" xml:space="preserve">
+    <value>btnMenuConfigInv</value>
+  </data>
+  <data name="&gt;&gt;btnMenuConfigInv.Type" xml:space="preserve">
+    <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=8.8.0.0, Culture=neutral, PublicKeyToken=e116d99a00eca71b</value>
+  </data>
+  <data name="&gt;&gt;btnCatalogoCuentas.Name" xml:space="preserve">
+    <value>btnCatalogoCuentas</value>
+  </data>
+  <data name="&gt;&gt;btnCatalogoCuentas.Type" xml:space="preserve">
     <value>DevComponents.DotNetBar.ButtonItem, DevComponents.DotNetBar2, Version=8.8.0.0, Culture=neutral, PublicKeyToken=e116d99a00eca71b</value>
   </data>
   <data name="&gt;&gt;buttonItem39.Name" xml:space="preserve">

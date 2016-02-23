@@ -30,6 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ImportarCatalogoExcel));
             this.tblCATALOGO = new System.Windows.Forms.DataGridView();
+            this.CODIGO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CUENTA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MAYOR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SALDO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CATEGORIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TIPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.progreso = new System.Windows.Forms.ProgressBar();
             this.openFileCatalogo = new System.Windows.Forms.OpenFileDialog();
@@ -38,12 +44,6 @@
             this.btnGUARDAR = new System.Windows.Forms.Button();
             this.btnEXAMINAR = new System.Windows.Forms.Button();
             this.btnPlantilla = new System.Windows.Forms.Button();
-            this.CODIGO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CUENTA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MAYOR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SALDO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CATEGORIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TIPO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tblCATALOGO)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -52,6 +52,7 @@
             // 
             this.tblCATALOGO.AllowUserToAddRows = false;
             this.tblCATALOGO.AllowUserToDeleteRows = false;
+            this.tblCATALOGO.BackgroundColor = System.Drawing.Color.DarkSeaGreen;
             this.tblCATALOGO.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tblCATALOGO.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CODIGO,
@@ -68,6 +69,50 @@
             this.tblCATALOGO.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.tblCATALOGO.Size = new System.Drawing.Size(769, 356);
             this.tblCATALOGO.TabIndex = 0;
+            // 
+            // CODIGO
+            // 
+            this.CODIGO.DataPropertyName = "CODIGO";
+            this.CODIGO.HeaderText = "CODIGO";
+            this.CODIGO.Name = "CODIGO";
+            this.CODIGO.ReadOnly = true;
+            // 
+            // CUENTA
+            // 
+            this.CUENTA.DataPropertyName = "CUENTA";
+            this.CUENTA.HeaderText = "CUENTA";
+            this.CUENTA.Name = "CUENTA";
+            this.CUENTA.ReadOnly = true;
+            this.CUENTA.Width = 200;
+            // 
+            // MAYOR
+            // 
+            this.MAYOR.DataPropertyName = "MAYOR";
+            this.MAYOR.HeaderText = "MAYOR";
+            this.MAYOR.Name = "MAYOR";
+            this.MAYOR.ReadOnly = true;
+            // 
+            // SALDO
+            // 
+            this.SALDO.DataPropertyName = "SALDO";
+            this.SALDO.HeaderText = "SALDO";
+            this.SALDO.Name = "SALDO";
+            this.SALDO.ReadOnly = true;
+            // 
+            // CATEGORIA
+            // 
+            this.CATEGORIA.DataPropertyName = "CATEGORIA";
+            this.CATEGORIA.HeaderText = "CATEGORIA";
+            this.CATEGORIA.Name = "CATEGORIA";
+            this.CATEGORIA.ReadOnly = true;
+            // 
+            // TIPO
+            // 
+            this.TIPO.DataPropertyName = "TIPO";
+            this.TIPO.HeaderText = "TIPO";
+            this.TIPO.Name = "TIPO";
+            this.TIPO.ReadOnly = true;
+            this.TIPO.Width = 150;
             // 
             // panel1
             // 
@@ -128,50 +173,6 @@
             this.btnPlantilla.TabIndex = 7;
             this.btnPlantilla.UseVisualStyleBackColor = true;
             this.btnPlantilla.Click += new System.EventHandler(this.btnPLANTILLA_Click);
-            // 
-            // CODIGO
-            // 
-            this.CODIGO.DataPropertyName = "CODIGO";
-            this.CODIGO.HeaderText = "CODIGO";
-            this.CODIGO.Name = "CODIGO";
-            this.CODIGO.ReadOnly = true;
-            // 
-            // CUENTA
-            // 
-            this.CUENTA.DataPropertyName = "CUENTA";
-            this.CUENTA.HeaderText = "CUENTA";
-            this.CUENTA.Name = "CUENTA";
-            this.CUENTA.ReadOnly = true;
-            this.CUENTA.Width = 200;
-            // 
-            // MAYOR
-            // 
-            this.MAYOR.DataPropertyName = "MAYOR";
-            this.MAYOR.HeaderText = "MAYOR";
-            this.MAYOR.Name = "MAYOR";
-            this.MAYOR.ReadOnly = true;
-            // 
-            // SALDO
-            // 
-            this.SALDO.DataPropertyName = "SALDO";
-            this.SALDO.HeaderText = "SALDO";
-            this.SALDO.Name = "SALDO";
-            this.SALDO.ReadOnly = true;
-            // 
-            // CATEGORIA
-            // 
-            this.CATEGORIA.DataPropertyName = "CATEGORIA";
-            this.CATEGORIA.HeaderText = "CATEGORIA";
-            this.CATEGORIA.Name = "CATEGORIA";
-            this.CATEGORIA.ReadOnly = true;
-            // 
-            // TIPO
-            // 
-            this.TIPO.DataPropertyName = "TIPO";
-            this.TIPO.HeaderText = "TIPO";
-            this.TIPO.Name = "TIPO";
-            this.TIPO.ReadOnly = true;
-            this.TIPO.Width = 150;
             // 
             // ImportarCatalogoExcel
             // 

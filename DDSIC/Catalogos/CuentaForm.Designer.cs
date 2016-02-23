@@ -156,7 +156,7 @@
             // CANCELAR
             // 
             this.CANCELAR.Image = ((System.Drawing.Image)(resources.GetObject("CANCELAR.Image")));
-            this.CANCELAR.Location = new System.Drawing.Point(226, 283);
+            this.CANCELAR.Location = new System.Drawing.Point(213, 263);
             this.CANCELAR.Name = "CANCELAR";
             this.CANCELAR.Size = new System.Drawing.Size(128, 40);
             this.CANCELAR.TabIndex = 51;
@@ -168,7 +168,7 @@
             // GUARDAR
             // 
             this.GUARDAR.Image = ((System.Drawing.Image)(resources.GetObject("GUARDAR.Image")));
-            this.GUARDAR.Location = new System.Drawing.Point(28, 283);
+            this.GUARDAR.Location = new System.Drawing.Point(38, 263);
             this.GUARDAR.Name = "GUARDAR";
             this.GUARDAR.Size = new System.Drawing.Size(128, 40);
             this.GUARDAR.TabIndex = 50;
@@ -188,12 +188,13 @@
             this.cbxMayor.ButtonDropDown.Visible = true;
             this.cbxMayor.Columns.Add(this.COD_CTA);
             this.cbxMayor.Columns.Add(this.NOMBRE);
-            this.cbxMayor.DropDownWidth = 320;
+            this.cbxMayor.DropDownWidth = 300;
+            this.cbxMayor.HotTracking = false;
+            this.cbxMayor.KeyboardSearchNoSelectionAllowed = false;
             this.cbxMayor.Location = new System.Drawing.Point(142, 106);
             this.cbxMayor.Name = "cbxMayor";
             this.cbxMayor.SelectionBoxStyle = DevComponents.AdvTree.eSelectionStyle.FullRowSelect;
             this.cbxMayor.Size = new System.Drawing.Size(199, 23);
-            this.cbxMayor.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cbxMayor.TabIndex = 52;
             // 
             // COD_CTA
@@ -211,14 +212,14 @@
             this.NOMBRE.DataFieldName = "NOMBRE";
             this.NOMBRE.Name = "NOMBRE";
             this.NOMBRE.Text = "CUENTA";
-            this.NOMBRE.Width.Absolute = 240;
+            this.NOMBRE.Width.Absolute = 220;
             // 
             // CuentaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = System.Drawing.Color.SeaGreen;
-            this.ClientSize = new System.Drawing.Size(380, 335);
+            this.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.ClientSize = new System.Drawing.Size(380, 323);
             this.Controls.Add(this.cbxMayor);
             this.Controls.Add(this.CANCELAR);
             this.Controls.Add(this.GUARDAR);
